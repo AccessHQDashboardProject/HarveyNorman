@@ -34,7 +34,7 @@ public class HarveyNormanPayment {
 	private StringBuffer verificationErrors = new StringBuffer();	
 	private Actions action;
 
-
+//Added the project to github.
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
