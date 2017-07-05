@@ -35,7 +35,7 @@ public class HarveyNormanPayment {
 	private Actions action;
 
 //Added the project to github.
-	//working on the second branch.
+	
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
