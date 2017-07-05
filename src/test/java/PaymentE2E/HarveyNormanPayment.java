@@ -45,7 +45,7 @@ public class HarveyNormanPayment {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
-	//Testing Github.
+	//Testing Github. Added one more push.
 	@Test
 	public void testPaymentProcess() throws Exception {
 		driver.get(baseUrl);
