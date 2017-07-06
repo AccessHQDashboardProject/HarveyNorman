@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="75162" started-at="2017-07-04T00:18:26Z" finished-at="2017-07-04T00:19:41Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="75162" started-at="2017-07-04T00:18:26Z" finished-at="2017-07-04T00:19:41Z">
+      <class name="PaymentE2E.HarveyNormanPayment">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:PaymentE2E.HarveyNormanPayment@754ba872]" name="setUp" is-config="true" duration-ms="3464" started-at="2017-07-04T10:18:26Z" finished-at="2017-07-04T10:18:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testPaymentProcess()[pri:0, instance:PaymentE2E.HarveyNormanPayment@754ba872]" name="testPaymentProcess" duration-ms="70758" started-at="2017-07-04T10:18:29Z" finished-at="2017-07-04T10:19:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPaymentProcess -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PaymentE2E.HarveyNormanPayment@754ba872]" name="tearDown" is-config="true" duration-ms="927" started-at="2017-07-04T10:19:40Z" finished-at="2017-07-04T10:19:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- PaymentE2E.HarveyNormanPayment -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
