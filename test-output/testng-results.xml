@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="97308" started-at="2017-07-06T01:58:29Z" finished-at="2017-07-06T02:00:06Z">
+  <suite name="Default suite" duration-ms="58412" started-at="2017-07-10T00:51:19Z" finished-at="2017-07-10T00:52:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="97308" started-at="2017-07-06T01:58:29Z" finished-at="2017-07-06T02:00:06Z">
-      <class name="PaymentE2E.HarveyNormanPayment">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:PaymentE2E.HarveyNormanPayment@754ba872]" name="setUp" is-config="true" duration-ms="4115" started-at="2017-07-06T11:58:29Z" finished-at="2017-07-06T11:58:33Z">
+    <test name="Default test" duration-ms="58412" started-at="2017-07-10T00:51:19Z" finished-at="2017-07-10T00:52:18Z">
+      <class name="PaymentE2E.BrowerMobProxyClass">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:PaymentE2E.BrowerMobProxyClass@14bf9759]" name="setUp" is-config="true" duration-ms="13195" started-at="2017-07-10T10:51:19Z" finished-at="2017-07-10T10:51:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testPaymentProcess()[pri:0, instance:PaymentE2E.HarveyNormanPayment@754ba872]" name="testPaymentProcess" duration-ms="91826" started-at="2017-07-06T11:58:33Z" finished-at="2017-07-06T12:00:05Z">
+        <test-method status="PASS" signature="testHTTPRequestResponse()[pri:0, instance:PaymentE2E.BrowerMobProxyClass@14bf9759]" name="testHTTPRequestResponse" duration-ms="40860" started-at="2017-07-10T10:51:33Z" finished-at="2017-07-10T10:52:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPaymentProcess -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:PaymentE2E.HarveyNormanPayment@754ba872]" name="tearDown" is-config="true" duration-ms="1340" started-at="2017-07-06T12:00:05Z" finished-at="2017-07-06T12:00:06Z">
+        </test-method> <!-- testHTTPRequestResponse -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:PaymentE2E.BrowerMobProxyClass@14bf9759]" name="tearDown" is-config="true" duration-ms="4336" started-at="2017-07-10T10:52:14Z" finished-at="2017-07-10T10:52:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PaymentE2E.HarveyNormanPayment -->
+      </class> <!-- PaymentE2E.BrowerMobProxyClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

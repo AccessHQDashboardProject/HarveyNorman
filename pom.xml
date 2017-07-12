@@ -5,7 +5,7 @@
 	<artifactId>HarveyNormanPayment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
-		<!--sourceDirectory>src</sourceDirectory-->
+		<!--sourceDirectory>src</sourceDirectory -->
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -46,12 +46,13 @@
 			<artifactId>selenium-java</artifactId>
 			<version>2.53.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.jayway.restassured/rest-assured -->
+		<!-- https://mvnrepository.com/artifact/net.lightbody.bmp/browsermob-core -->
 		<dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>2.9.0</version>
+			<groupId>net.lightbody.bmp</groupId>
+			<artifactId>browsermob-core</artifactId>
+			<version>2.1.2</version>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 </project>

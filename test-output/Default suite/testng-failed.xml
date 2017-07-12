@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="PaymentE2E.HarveyNormanPayment">
+      <class name="PaymentE2E.BrowerMobProxyClass">
         <methods>
-          <include name="testPaymentProcess"/>
+          <include name="testHTTPRequestResponse"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- PaymentE2E.HarveyNormanPayment -->
+      </class> <!-- PaymentE2E.BrowerMobProxyClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
