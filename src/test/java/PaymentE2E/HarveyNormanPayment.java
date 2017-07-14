@@ -53,12 +53,13 @@ public class HarveyNormanPayment {
 		//explicitWaitElement(By.id("search")).clear();
 
 		//Search iphone
-		explicitWaitElement(By.id("search")).sendKeys("iphone");
-		explicitWaitElement(By.xpath("//form[@id='search_form']/button")).click();
-		explicitWaitElement(By.xpath("//div[@id='category-grid']/div[1]/div[2]/div/div/div[3]/a")).click();
+		explicitWaitElement(driver.findElement(By.id("search"))).sendKeys("iphone");
+		explicitWaitElement(driver.findElement(By.xpath("//form[@id='search_form']/button"))).click();
+		
+		explicitWaitElement(driver.findElement(By.xpath("//div[@id='category-grid']/div[1]/div[2]/div/div/div[3]/a"))).click();
 		/*WebElement addToCartBtn = explicitWaitElement(By.id("btn-add-to-cart"));
 		addToCartBtn.click();*/
-		explicitWaitElement(By.id("btn-add-to-cart")).click();
+		explicitWaitElement(driver.findElement(By.id("btn-add-to-cart"))).click();
 		
 		/*//Code to get the status code of the add to cart button click.
 		WebElement atc = driver.findElement(By.id("product_addtocart_form"));
@@ -68,7 +69,7 @@ public class HarveyNormanPayment {
 		System.out.println("Status code for add to cart ajax call " + statusCode );*/
 		
 		
-		WebElement addToCartMsg = explicitWaitElement(By.id("btn_checkout"));
+		WebElement addToCartMsg = explicitWaitElement(driver.findElement(By.id("btn_checkout")));
 
 		if(addToCartMsg.isDisplayed())
 		{
@@ -89,15 +90,15 @@ public class HarveyNormanPayment {
 		//Go back to the Shop all product link and Search Trampolines
 		//Code to handle Mouse hover.
 		action = new Actions(driver);
-		action.moveToElement(explicitWaitElement(By.xpath("//a[@id='shopAllMd']"))).click().perform();
+		action.moveToElement(explicitWaitElement(driver.findElement(By.xpath("//a[@id='shopAllMd']")))).click().perform();
 		action.moveToElement(driver.findElement(By.xpath("//*[@id='navMdList']/ul/li[22]/a"))).perform();
-		action.moveToElement(explicitWaitElement(By.linkText("Trampolines"))).perform();
+		action.moveToElement(explicitWaitElement(driver.findElement(By.linkText("Trampolines")))).perform();
 		action.click().perform();
 
 		//Add Trampoline in a cart.
-		explicitWaitElement(By.linkText("Plum 8ft Space Zone V3 Trampoline")).click();
-		explicitWaitElement(By.id("btn-add-to-cart")).click();
-		WebElement TopCartBtn = explicitWaitElement(By.id("top-cart"));
+		explicitWaitElement(driver.findElement(By.linkText("Plum 8ft Space Zone V3 Trampoline"))).click();
+		explicitWaitElement(driver.findElement(By.id("btn-add-to-cart"))).click();
+		WebElement TopCartBtn = explicitWaitElement(driver.findElement(By.id("top-cart")));
 		Thread.sleep(2000);
 		TopCartBtn.sendKeys("");
 		int itemCount = Integer.parseInt(TopCartBtn.getText());
@@ -110,7 +111,7 @@ public class HarveyNormanPayment {
 		else
 			System.out.println("Cart is empty");
 
-		explicitWaitElement(By.id("top-cart")).click();
+		explicitWaitElement(driver.findElement(By.id("top-cart"))).click();
 		Thread.sleep(2000);
 		WebElement continueBtn = driver.findElement(By.xpath("//div[@id='topCartContent']/div/div[2]/div[2]/div/a"));
 
@@ -133,9 +134,9 @@ public class HarveyNormanPayment {
 
 		//Change the Postcode
 
-		explicitWaitElement(By.id("s_method_delivery_delivery")).click();
+		explicitWaitElement(driver.findElement(By.id("s_method_delivery_delivery"))).click();
 		WebElement pincodeAutoPopulateTB = driver.findElement(By.name("my-location-input"));
-		explicitWaitElement(By.name("my-location-input")).sendKeys("Sydney");
+		explicitWaitElement(driver.findElement(By.name("my-location-input"))).sendKeys("Sydney");
 		Thread.sleep(1000);		
 		pincodeAutoPopulateTB.sendKeys(Keys.ARROW_DOWN);
 		pincodeAutoPopulateTB.sendKeys(Keys.ENTER);
@@ -143,7 +144,7 @@ public class HarveyNormanPayment {
 		Thread.sleep(5000);
 		//By checkoutBtn = By.id("btn_checkout");
 		By checkoutBtn = By.xpath("//a[@id='btn_checkout']");
-		WebElement CheckBtn = explicitWaitElement(checkoutBtn);
+		WebElement CheckBtn = explicitWaitElement(driver.findElement(checkoutBtn));
 		if (CheckBtn.isDisplayed() == true && CheckBtn.isEnabled()== true)
 		{
 			CheckBtn.click();
@@ -159,25 +160,25 @@ public class HarveyNormanPayment {
 			System.out.println("Did not Find Checkout button...Failed");
 
 		//Fill the payment form
-		explicitWaitElement(By.id("billing:firstname")).clear();
-		explicitWaitElement(By.id("billing:firstname")).sendKeys("Test");
-		explicitWaitElement(By.id("billing:lastname")).clear();
-		explicitWaitElement(By.id("billing:lastname")).sendKeys("Test");
-		explicitWaitElement(By.id("billing:telephone")).clear();
+		explicitWaitElement(driver.findElement(By.id("billing:firstname"))).clear();
+		explicitWaitElement(driver.findElement(By.id("billing:firstname"))).sendKeys("Test");
+		explicitWaitElement(driver.findElement(By.id("billing:lastname"))).clear();
+		explicitWaitElement(driver.findElement(By.id("billing:lastname"))).sendKeys("Test");
+		explicitWaitElement(driver.findElement(By.id("billing:telephone"))).clear();
 
 
 		//Enter Card details
-		explicitWaitElement(By.id("billing:telephone")).sendKeys("0414141414");
-		//explicitWaitElement(By.id("billing:email")).clear();
-		explicitWaitElement(By.id("billing:email")).sendKeys("test@test.com");
-		//explicitWaitElement(By.id("billing:street1")).clear();
-		explicitWaitElement(By.id("billing:street1")).sendKeys("112 Alexander Street");
-		//explicitWaitElement(By.id("id_comments")).clear();
-		explicitWaitElement(By.id("id_comments")).sendKeys("Testing");
+		explicitWaitElement(driver.findElement(By.id("billing:telephone"))).sendKeys("0414141414");
+		//explicitWaitElement(driver.findElement(driver.findElement(By.id("billing:email")).clear();
+		explicitWaitElement(driver.findElement(By.id("billing:email"))).sendKeys("test@test.com");
+		//explicitWaitElement(driver.findElement(By.id("billing:street1")).clear();
+		explicitWaitElement(driver.findElement(By.id("billing:street1"))).sendKeys("112 Alexander Street");
+		//explicitWaitElement(driver.findElement(By.id("id_comments")).clear();
+		explicitWaitElement(driver.findElement(By.id("id_comments"))).sendKeys("Testing");
 
-		explicitWaitElement(By.id("id_accept_terms")).sendKeys(Keys.SPACE);
+		explicitWaitElement(driver.findElement(By.id("id_accept_terms"))).sendKeys(Keys.SPACE);
 
-		Select visaCardDropDown  = new Select(explicitWaitElement(By.id("checkout-payment-method-switcher")));
+		Select visaCardDropDown  = new Select(explicitWaitElement(driver.findElement(By.id("checkout-payment-method-switcher"))));
 		visaCardDropDown.selectByVisibleText("Credit Card");
 
 
@@ -189,7 +190,7 @@ public class HarveyNormanPayment {
 
 		System.out.println("Switched to Parent");
 		//Switch to ChildFrame using Parent Frame Object
-		WebElement childFrameCCnum = explicitWaitElement(By.className("gw-proxy-cardNumber"));
+		WebElement childFrameCCnum = explicitWaitElement(driver.findElement(By.className("gw-proxy-cardNumber")));
 
 		if (childFrameCCnum.isDisplayed()==true){
 
@@ -214,7 +215,7 @@ public class HarveyNormanPayment {
 
 			//Switch to the CVVnumber Textbox Frame.
 			
-			WebElement childFrame = explicitWaitElement(By.cssSelector(".gw-proxy-securityCode"));
+			WebElement childFrame = explicitWaitElement(driver.findElement(By.cssSelector(".gw-proxy-securityCode")));
 			if (childFrame.isDisplayed()==true){
 
 				WebDriver childFrameObjCVV = parentFrameObj.switchTo().frame(childFrame);
@@ -235,7 +236,7 @@ public class HarveyNormanPayment {
 
 		
 		String expectedFailuarMsg = "Your transaction was declined by issuer. Contact us if you need help";
-		WebElement statusAlert = explicitWaitElement(By.xpath("//*[@id='content']/div[2]"));
+		WebElement statusAlert = explicitWaitElement(driver.findElement(By.xpath("//*[@id='content']/div[2]")));
 		String actualFailuarMsg = statusAlert.getText();
 		Assert.assertEquals(actualFailuarMsg, expectedFailuarMsg, "Satus message is not matching..");
 				
@@ -253,10 +254,10 @@ public class HarveyNormanPayment {
 	}
 
 	//Method for explicit wait - to resolve the Syncronization issue.
-	public WebElement explicitWaitElement(final By locator) {
+	public WebElement explicitWaitElement(WebElement element) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 50);
-		WebElement webelmnt = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		WebElement webelmnt = wait.until(ExpectedConditions.visibilityOf(element));
 		return  webelmnt;
 	};
 
